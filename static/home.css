@@ -1,0 +1,218 @@
+/* home.css */
+
+.content {
+    /* 내용이 들어갈 연회색 네모 박스 만들기 */
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #cdcdcd;
+
+    /* menu2 컨테이너에서 content 아이템이 차지할 면적의 비율 설정 */
+    flex: 2;
+
+    /* content 영역 안에 updatenews-container / miniroom-container 아이템 배치를 위해 컨테이너로 설정 */
+    display: flex;
+    flex-direction: column;
+
+    /* content 영역 안 상하좌우 여백 확보를 위해 패딩값 설정 */
+    padding: 2rem;
+}
+
+.updatenews-container {
+    /* content 컨테이너에서 updatenews-container 아이템이 차지할 면적의 비율 설정 */
+    flex: 0.5;
+    
+    /* updatenews-container 영역 안에 update-header / update-list-container / update-category-container 아이템 배치를 위해 컨테이너로 설정 */
+    display: flex;
+    flex-direction: column;
+}
+
+.update-header {
+    /* 폰트 사이즈/색상/서체 지정 */
+    font-size: 1.8rem;
+    color: #3E85AB;
+    font-family: 'KOTRA_BOLD-Bold';
+
+    /* updatenews-container 컨테이너에서 update-header 아이템이 차지할 면적의 비율 설정 */
+    flex: 0.2;
+}
+
+.update-content-container {
+    /* updatenews-container 컨테이너에서 update-content-container 아이템이 차지할 면적의 비율 설정 */
+    flex: 1;
+
+    /* update-content-container 영역 안에 update-list-container / update-category-container 아이템 배치를 위해 컨테이너로 설정 */
+    display: flex;
+    flex-direction: row;
+}
+
+.update-list-container {
+    /* update-content-container 컨테이너에서 update-list-container 아이템이 차지할 면적의 비율 설정 */
+    flex: 1;
+    
+    /* update-list-container 영역 안에 list1 / list2 / list3 / list4 아이템 배치를 위해 컨테이너로 설정 */
+    display: flex;
+    flex-direction: column;
+    /* 내용이 컨테이너 크기를 넘어갈 경우 다음 줄로 표시 */
+    flex-wrap: wrap;
+
+    font-size: 1.3rem;
+
+    /* 상단에 실선과의 간격 확보를 위해 패딩 위쪽 값만 지정 */
+    padding-top: 0.5rem;
+}
+
+.list1 {
+    /* 리스트들 간에 간격 확보를 위해 패딩 아랫 값만 지정 */
+    padding-bottom: 0.5rem;
+}
+
+.list2 {
+    padding-bottom: 0.5rem;
+}
+
+.list3 {
+    padding-bottom: 0.5rem;
+}
+
+.list4 {
+    padding-bottom: 0.5rem;
+}
+
+.photo {
+    /* 폰트를 감싸는 영역 스타일 지정 */
+    background-color: #F2625E;
+    border-radius: 0.3rem;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+
+    /* 폰트 색상/두께 지정 */
+    color: white;
+    font-weight: 600;
+
+    /* 동일선 상의 내용과 간격 확보를 위해 마진 오른쪽 값만 지정 */
+    margin-right: 0.4rem;
+}
+
+.board {
+    /* 폰트를 감싸는 영역 스타일 지정 */
+    background-color: #667AC1;
+    border-radius: 0.3rem;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+
+    /* 폰트 색상/두께 지정 */
+    color: white;
+    font-weight: 600;
+
+    /* 동일선 상의 내용과 간격 확보를 위해 마진 오른쪽 값만 지정 */
+    margin-right: 0.4rem;
+}
+
+.update-category-container {
+    /* update-content-container 컨테이너에서 update-category-container 아이템이 차지할 면적의 비율 설정 */
+    flex:1;
+
+    /* update-category-container 영역 안에 category1 / category2 아이템 배치를 위해 컨테이너로 설정 */
+    display: flex;
+    flex-direction: column;
+    
+    font-size: 1.3rem;
+
+    /* 상단에 실선과의 간격 확보를 위해 패딩 위쪽 값만 지정 */
+    padding-top: 0.5rem;
+}
+ 
+.category1 {
+    /* category1 영역 안에 diary / photobook 아이템 배치를 위해 컨테이너로 설정 */
+    display: flex;
+    flex-direction: row;
+}
+
+.category2 {
+    /* category2 영역 안에 boardbook / visitbook 아이템 배치를 위해 컨테이너로 설정 */
+    display: flex;
+    flex-direction: row;
+
+    /* category1 영역과 상하 간격 확보를 위해 마진 윗쪽 값만 지정 */
+    margin-top: 0.5rem;
+}
+
+.diary {
+    /* category1 컨테이너에서 diary 아이템이 차지할 면적의 비율 설정 */
+    flex: 1;
+}
+
+.photobook {
+    /* category1 컨테이너에서 photobook 아이템이 차지할 면적의 비율 설정 */
+    flex: 1;
+}
+
+.boardbook {
+    /* category2 컨테이너에서 boardbook 아이템이 차지할 면적의 비율 설정 */
+    flex: 1;
+}
+
+.visitbook {
+    /* category2 컨테이너에서 visitbook 아이템이 차지할 면적의 비율 설정 */
+    flex: 1;
+}
+
+.miniroom-container {
+    /* content 컨테이너에서 miniroom-container 아이템이 차지할 면적의 비율 설정 */
+    flex: 1;
+
+    /* 폰트 사이즈/색상/서체 지정 */
+    font-size: 1.8rem;
+    color: #3E85AB;
+    font-family: 'KOTRA_BOLD-Bold';
+
+    display: flex;
+    flex-direction: column;
+}
+
+.miniroom-header {
+      /* 폰트 사이즈/색상/서체 지정 */
+    font-size: 1.8rem;
+    color: #3E85AB;
+    font-family: 'KOTRA_BOLD-Bold';
+
+    /* updatenews-container 컨테이너에서 update-header 아이템이 차지할 면적의 비율 설정 */
+    flex: 0.05;
+}
+
+.miniroom-image {
+    flex: 1;
+
+    /* 이미지 불러오기 */
+    background-image: url('./otter.gif');
+    /* 이미지 사이즈 크기 조정 */
+    background-size: 25%;
+    /* 이미지 반복 */
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: #0098DC;
+}
+
+.line {
+    /* 실선 */
+    border: 1px solid #808080;
+}
+
+.dotline {
+    /* 점선 */
+    border-bottom: 1px dashed #808080;    
+}
+
+.pointtext {
+    color: tomato;
+}
+
+.count {
+    /* 폰트 색상/두께/서체 지정 */
+    color: #2228B3;
+    font-weight: 600;
+    font-family: 'NeoDunggeunmo';
+
+    /* 좌측 내용과 좌우 간격 확보를 위해 마진 왼쪽값만 지정 */
+    margin-left: 0.4rem;
+}
+

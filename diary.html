@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지순의 미니홈피</title>
+    <link rel="stylesheet" href="./static/font.css" />
+    <link rel="stylesheet" href="./static/layout.css" />
+    <link rel="stylesheet" href="./static/home.css" />
+    <link rel="stylesheet" href="./static/diary.css" />
+    <script src="https://kit.fontawesome.com/a19bc950f0.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="bookcover">
+        <div class="bookdot">
+            <div class="page">
+                <div class="menu1">
+                    <div class="visittext">TODAY <span class="pointtext">28</span>ㅣTOTAL 234918</div>
+                    <div class="main">
+                        <div class="mainimage"></div>
+                        <div class="maincontent">
+                            어느 공간에 담기든 그 속에서 제 역할을 잘 해내는 물과 같은 유연한 사람이 되고자 어제보다 발전된 삶을 살고있는 지순입니다 :)
+                        </div>
+                        <div class="mainuser">지순</div>
+                        <div class="maindropdown">
+                            <div class="dropdown-btn">
+                                <div class="dropdown-title">파도타기</div>
+                                <div class="triangle-btn"></div>
+                            </div>
+                            <div class="dropdown-content">
+                                <a href="https://cafe.naver.com/codeuniv" target="_blank">코뮤니티로 가기</a>
+                                <a href="https://www.instagram.com/coding_comu/" target="_blank">인스타그램으로 가기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu2">
+                    <div class="titlecontainer">
+                        <div class="titletext1">지순의 미니홈피</div>
+                        <div class="titletext2">http://url주소/나중에 입력</div>
+                    </div>
+                    <div class="content box">
+                        <div class="calendar-container">
+                            <div class="today-date">
+                                02.30
+                                <br>TUE
+                            </div>
+                            <div class="montly-date">
+                                1 2 3 <span class="blue-font">4</span>
+                                <span class="red-font">5</span> 6 7 8 9 10
+                                <span class="blue-font">11</span> <span class="red-font">12
+                                </span> 13 14 15 16 17 <span class="blue-font">18</span>
+                                <br><span class="red-font">19</span> 20 21 22 23 24 <span class="blue-font">25</span>
+                                <span class="red-font">26</span> 27 28 29 30
+                            </div>
+                        </div>
+
+                        <div class="date-container">
+                            <div class="day-box">
+                                <div class="day-title">2022.01.03 수 16:33</div>
+                                <div class="day-content">
+                                    울지않ㄱㅣ
+                                    <br>아프ㅈㅣ 않ㄱㅣ
+                                    <br>씩씩ㅎrㄱㅣ
+                                    <br>억ㅈㅣ로ㄹr도 웃ㄱㅣ
+                                    <br>티ㄴㅐㅈㅣ 말ㄱㅣ
+                                    <br>.
+                                    <br>.
+                                    <br>.
+                                    <br>오늘도 괜찮은 듯
+                                    <br>그렇ㄱㅔ 지ㄴㅐㄱㅣ
+                                </div>
+                            </div>
+                            <div class="day-box">
+                                <div class="day-title">2022.01.03 수 16:33</div>
+                                <div class="day-content">
+                                    난.....ㄱㅏ끔
+                                    <br>눈물을 흘린ㄷㅏ...
+                                    <br>ㄱㅏ끔은 눈물을 참을 수 없는 ㄴㅐ가 별루ㄷㅏ...
+                                    <br>억ㅈㅣ로ㄹr도 웃ㄱㅣ
+                                    <br>맘이 ㅇㅏㅍㅏ서...
+                                    <br>소ㄹㅣ치며... 울 수 있ㄷㅏ는건...
+                                    <br>좋은ㄱㅓㅇㅑ...
+                                    <br>ㅁㅓ...꼭 슬ㅍㅓㅇㅑ만 우는 건 ㅇㅏ니잖ㅇㅏ..^^
+                                    <br>난...눈물ㅇㅣ...좋다...
+                                    <br>아니...
+                                    <br>ㅁㅓ리가 ㅇㅏ닌
+                                    <br>맘으로...우는 ㄴㅐㄱㅏ 좋ㄷㅏ..ㅎ
+                                </div>
+                            </div>
+
+                            <div class="btn-box">
+                                <button class="scret-btn" onclick="getTextFile()">
+                                    <i class="fas fa-unlock-alt style"></i>
+                                    수달의 비밀일기 보기
+                                </button>
+                            </div>
+
+                            <div class="day-box" id="secret-box">
+                                <div class="day-title">수달의 비밀 일기</div>
+                                <div class="day-content" id="secret-diary"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="menu3">
+                    <div class="menu-btn-container">
+                        <a href="./home2.html">홈</a>
+                        <a href="./diary.html">다이어리</a>
+                        <a href="./photo.html">사진첩</a>
+                        <a href="#">방명록</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function getTextFile() {
+            let input = document.createElement("input");
+            input.type = "file";
+            input.accept = "text/plain";
+            input.onchange = function (event) {
+                processFile(event.target.files[0]);
+            };
+            input.click();
+        }
+
+        function processFile(file) {
+            let reader = new FileReader();
+            reader.readAsText(file, "utf-8");
+
+            reader.onload = function () {
+                document.getElementById("secret-diary").innerText = reader.result;
+                document.getElementById("secret-box").style.display = 'block';
+            };
+        }
+    </script>
+</body>
+
+</html>

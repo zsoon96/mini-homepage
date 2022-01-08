@@ -1,0 +1,65 @@
+/* visit.css */
+
+.box {
+    position: relative;
+}
+
+.visit-container {
+    position:absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    font-family: 'NeoDunggeunmo';
+}
+
+.visit-title {
+    font-size: 1.4rem;
+
+    padding: 12px 0px 12px 12px;
+    background-color: #E7E7E7;
+}
+
+.visit-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-top: 24px;
+    margin-bottom: 40px;
+}
+
+.visit-img {
+    flex: 0.5;
+
+    height: 180px;
+    margin-right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-size: cover; */
+
+    /* background-color: crimson; */
+}
+
+.visit-img > img {
+    width: 95%;
+}
+
+/* .background {
+    background-image: url('./background.png');
+} */
+
+.visit-text {
+    flex: 1;
+
+    padding-right: 25px;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}

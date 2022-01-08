@@ -1,0 +1,276 @@
+/* layout.css */
+
+html {
+    /* 기본 폰트 고정 */
+    font-size: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    /* 배경화면 색상 지정 */
+    background-color: #a6a6a6;
+
+    /* 패턴 이미지 불러오기 */
+    background-image: url('./images/pattern.png');
+    /* 이미지 사이즈 크기 조정 */
+    background-size: 8%;
+    /* 이미지 반복 */
+    background-repeat: repeat;
+
+    /* 기본 body 사이즈를 화면 크기로 고정 */
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.bookcover {
+    /* 배경화면 색상 지정 */
+    background-color: #B4D0DA;
+    border: 1px solid #738186;
+
+    /* 기본 크기 지정 */
+    width: 1000px;
+    height: 640px;
+
+    /* 모서리 둥글게 */
+    border-radius: 10px;
+
+    /* 상하 마진 55px, 좌우 마진 auto(중앙 배치) 지정 */
+    margin: 55px auto;
+
+    /* bookdot 요소에서 absolute 속성값을 이용하기 위해 position을 relative로 지정 */
+    position:relative;
+}
+
+.bookdot {
+    /* 하얀색 점선 윤곽선이 있는 네모 박스 만들기 */
+    border: dashed 2px white;
+    border-radius: 10px;
+
+    /* bookcover div 기준으로 상하좌우 마진 15px씩 떨어져있는 위치에 고정  */
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+}
+
+.page {
+    /* bookdot div 기준으로 상하좌우 마진 10px씩 떨어져있는 위치에 고정  */
+    position: absolute;
+    /* 상단 여백 확보를 위해 top만 마진 24px로 지정 */
+    top: 24px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+
+     /* menu1-3 아이템 요소에서 flex 속성값을 이용하기 위해 display 속성을 flex로 설정하여 컨테이너로 지정 */
+    display: flex;
+}
+
+.menu1 {
+    /* page 컨테이너에서 menu1 아이템이 차지할 면적의 비율 설정 */
+    flex: 0.3;
+
+    /* visittext와 main 아이템 요소에서 flex 속성값을 이용하기 위해 display 속성을 flex로 설정하여 컨테이너로 지정 */
+    display: flex;
+    /* visittext와 main 아이템 요소의 세로 정렬 지정 */
+    flex-direction: column;
+}
+
+.visittext {
+    /* menu1 컨테이너에서 visittext 아이템이 차지할 면적의 비율 설정 */
+    flex: 0.1;
+
+    /* 텍스트 가운데 정렬 */
+    text-align: center;
+
+    font-size: 1.3rem;
+    font-family: 'NeoDunggeunmo';
+}
+
+.main {
+   /* 내용이 들어갈 연회색 네모 박스 만들기 */
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #cdcdcd;
+
+    /* menu1 컨테이너에서 main 아이템이 차지할 면적의 비율 설정 */
+    flex: 2;
+
+    /* main 영역 안에 mainimage / maincontent / mainuser 아이템 배치를 위해 컨테이너로 설정 */
+    display: flex;
+    flex-direction: column;
+
+    /* main 영역 안 상하좌우 여백 확보를 위해 패딩값 설정 */
+    padding: 3.2rem;
+}
+
+.mainimage {
+    /* 이미지 불러오기 */
+    background-image: url('./bread dog.jpeg');
+    /* 이미지 영역 안에 가득하게 사이즈 조정 */
+    background-size: cover;
+    /* 이미지 반복 없게 하나만 등장 */
+    background-repeat: no-repeat;
+    /* 이미지 위치 가운데로 조정 */
+    background-position: center;
+
+    /* main 컨테이너에서 mainimage 아이템이 차지할 면적의 비율 설정 */
+    flex: 0.5;
+}
+
+.maincontent {
+    /* main 컨테이너에서 maincontent 아이템이 차지할 면적의 비율 설정 */
+    flex: 0.9;
+    /* 상단의 이미지와 간격을 위해 패딩 위쪽 값만 설정 */
+    padding-top: 2rem;
+    
+    /* 폰트 사이즈/행간/서체 지정 */
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-family: 'KyoboHand';
+}
+
+.mainuser {
+    /* main 컨테이너에서 maincontent 아이템이 차지할 면적의 비율 설정 */
+    flex: 0.05;
+    
+    /* 폰트 사이즈/서체 지정 */
+    font-size: 1.8rem;
+    font-family: 'KyoboHand';
+}
+
+.maindropdown {
+  /* flex: 0; */
+  border: 1px solid #c9d4da;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 1rem;
+  position: relative;
+}
+
+.triangle-btn {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #838383;
+}
+
+.maindropdown:hover > .dropdown-content {
+  display: block;
+}
+
+.dropdown-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 4px;
+
+  font-size: 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+
+  font-size: 1rem;
+}
+
+.dropdown-content > a {
+  display: block;
+  background-color: #f9f9f9;
+  width: 100%;
+  padding: 6px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-content > a:hover {
+  background-color: #f1f1f1;
+}
+
+.menu2 {
+    /* page 컨테이너에서 menu2 아이템이 차지할 면적의 비율 설정 */
+    flex: 1;
+
+    /* titlecontainer와 content 아이템 요소에서 flex 속성값을 이용하기 위해 display 속성을 flex로 설정하여 컨테이너로 지정 */
+    display: flex;
+    /* titlecontainer와 content 아이템 요소 세로 정렬 지정 */
+    flex-direction: column;
+
+    /* menu1과 영역 분리를 위해 왼쪽 마진 20px 지정 */
+    margin-left: 20px;
+}
+
+.titlecontainer {
+    /* menu2 컨테이너에서 titlecontainer 아이템이 차지할 면적의 비율 설정 */
+    flex: 0.1;
+
+    /* titletext1과 titletext2 아이템 요소에서 flex 속성값을 이용하기 위해 display 속성을 flex로 설정하여 컨테이너로 지정 */
+    display: flex;
+    /* titletext1과 titletext2 아이템 요소 가로 정렬 지정 */
+    flex-direction: row;
+    /* flex 영역 안에서 아래쪽으로 정렬 */
+    align-items: flex-end;
+}
+
+.titletext1 {
+    /* titlecontainer 컨테이너에서 titletext1 아이템이 차지할 면적의 비율 설정 */
+    flex: 1;
+
+    font-size: 1.6rem;
+}
+
+.titletext2 {
+    /* titlecontainer 컨테이너에서 titletext2 아이템이 차지할 면적의 비율 설정 */
+    flex: 1;
+
+    /* 폰트 사이즈/정렬 지정 */
+    font-size: 1rem;
+    text-align: right;
+}
+
+.menu3 {
+    /* page 컨테이너에서 menu3 아이템이 차지할 면적의 비율 설정 */
+    flex: 0.15;
+}
+
+.menu-btn-container {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 50px;
+}
+
+.menu-btn-container > a {
+    font-family: 'NeoDunggeunmo';
+    font-size: 1.4rem;
+
+    text-align: left;
+
+    border: 1px solid #617DC1;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    background-color: #3B87AB;
+
+    padding: 10px 0px 10px 10px;
+
+    text-decoration-line: none;
+    color: white;
+
+    margin-bottom: 14px;
+}
+
+.menu-btn-container > a:hover {
+    background-color: #617DC1;
+}

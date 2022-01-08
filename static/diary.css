@@ -1,0 +1,119 @@
+/* diary.css */
+
+.box {
+    position: relative;
+    
+}
+
+.calendar-container {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+
+    height: 30px;
+
+    border: 1px solid #cdcdcd;
+
+    display: flex;
+    flex-direction: row;
+
+    font-family: 'NeoDunggeunmo';
+    font-size: 1.5rem;
+
+    padding: 10px 10px 10px 10px;
+}
+
+.today-date {
+    flex: 0.15;
+
+    font-size: 1.6rem;
+    text-align: center;
+    color: #0098DC;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.montly-date {
+    flex: 1;
+
+    word-spacing: 8px;
+    line-height: 18px;
+
+    margin-left: 15px;
+    padding-left: 20px;
+
+    cursor: pointer;
+}
+
+.blue-font {
+    color: blue;
+}
+
+.red-font {
+    color: red;
+}
+
+.date-container {
+    height: 430px;
+
+    position: absolute;
+    top: 100px;
+    right: 15px;
+    left: 15px;
+
+    overflow: auto;
+}
+
+.day-box{
+    border: 1px solid #cdcdcd;
+    
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.day-title {
+    font-family: 'NeoDunggeunmo';
+    font-size: 1.4rem;
+    color: #0098DC;
+
+    margin-bottom: 20px;
+}
+
+.day-content {
+    font-family: 'KyoboHand';
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 24px;
+}
+
+.scret-btn {
+    padding: 20px;
+    display: block;
+    margin: auto;
+
+    border: none;
+
+    font-family: 'NeoDunggeunmo';
+    font-size: 1.5rem;
+    color: white;
+
+    cursor: pointer;
+
+    background-color: white;
+}
+
+.style {
+    color: white;
+    margin-right: 12px;
+}
+
+.scret-btn:hover {
+    background-color: #03AB8A;
+    transition: 300ms ease all;
+}
+
+#secret-box {
+    display: none;
+}
